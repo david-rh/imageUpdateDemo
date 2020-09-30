@@ -31,30 +31,10 @@ items:
       spec:
         containers:
         - image: quay.io/daanders/demosite:0.2
-          imagePullPolicy: Always
           name: demosite
           ports:
           - containerPort: 8080
             protocol: TCP
-- apiVersion: image.openshift.io/v1
-  kind: ImageStream
-  metadata:
-    labels:
-      app: demosite
-    name: demosite
-  spec:
-    lookupPolicy:
-      local: false
-    tags:
-    - annotations:
-        openshift.io/imported-from: quay.io/daanders/demosite:0.2
-      from:
-        kind: DockerImage
-        name: quay.io/daanders/demosite:0.2
-      importPolicy: { "scheduleds":"true" }
-      name: "0.2"
-      referencePolicy:
-        type: Source
 - apiVersion: route.openshift.io/v1
   kind: Route
   metadata:
