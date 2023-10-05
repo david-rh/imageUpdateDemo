@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/python-36
+FROM registry.redhat.io/rhel9/python-311
 
 LABEL name="demosite" \
       version="latest"
