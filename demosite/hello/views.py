@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello! Demo of image version management. This is a NEW verion 0.2")
+    return HttpResponse("Hello! Demo of image version management. This is verion 0.2")
 
